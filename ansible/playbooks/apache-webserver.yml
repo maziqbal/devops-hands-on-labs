@@ -3,17 +3,19 @@
   hosts: all
   become: yes
   gather_facts: yes
-  
+    
   tasks:
    - name: Update apt cache
      ansible.builtin.apt:
       update_cache: yes
       cache_valid_time: 3600
+     when: ansible_os_family == "Debian"
 
    - name: Install Apache
      ansible.builtin.apt:
       name: apache2
       state: present
+     when: ansible_os_family == "Debian"
 
    - name: Ensure Apache is running and enabled
      ansible.builtin.service:
