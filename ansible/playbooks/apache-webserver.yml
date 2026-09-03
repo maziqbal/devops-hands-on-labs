@@ -1,6 +1,6 @@
 ---
 - name: Install and configure Apache web server
-  hosts: all
+  hosts: webservers
   become: yes
   gather_facts: yes
     
