@@ -13,7 +13,7 @@
 
    - name: Install Apache
      ansible.builtin.apt:
-      name: apache2
+      name: "{{webserverondebian}}"
       state: present
      when: ansible_os_family == "Debian"
 
@@ -45,7 +45,7 @@
      when: ansible_os_family == "Debian"
    - name: Install webserver on redhat nodes (yum install httpd)
      yum:
-      name: httpd
+      name: "{{webserveronredhat}}"
       state: present
      when: ansible_os_family == "RedHat"
    - name: Start webserver on RedHat node (service httpd start)
