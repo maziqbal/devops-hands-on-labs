@@ -43,4 +43,13 @@
       group: root
       mode: "0644" 
      when: ansible_os_family == "Debian"
-    
+   - name: Install webserver on redhat nodes (yum install httpd)
+     yum:
+      name: httpd
+      state: present
+     when: ansible_os_family == "RedHat"
+   - name: Start webserver on RedHat node (service httpd start)
+     service:
+      name: httpd
+      state: started
+     when: ansible_os_family == "RedHat"
