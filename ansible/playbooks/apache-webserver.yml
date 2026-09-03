@@ -19,7 +19,7 @@
 
    - name: Ensure Apache is running and enabled
      ansible.builtin.service:
-      name: apache2
+      name: "{{webserverondebian}}"
       state: started
       enabled: yes
      when: ansible_os_family == "Debian"
@@ -50,6 +50,6 @@
      when: ansible_os_family == "RedHat"
    - name: Start webserver on RedHat node (service httpd start)
      service:
-      name: httpd
+      name: "{{webserveronredhat}}"
       state: started
      when: ansible_os_family == "RedHat"
