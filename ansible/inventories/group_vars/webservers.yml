@@ -1,0 +1,6 @@
+---
+webserverondebian: apache2
+webserveronredhat: httpd
+
+javaondebian: openjdk-21-jdk
+javaonredhat: java-21-amazon-corretto-devel

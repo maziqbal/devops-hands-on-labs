@@ -1,0 +1,30 @@
+---
+- hosts: webservers
+  become: yes
+  gather_facts: yes
+  tasks:
+   - name: Update apt-cache
+     ansible.builtin.apt:
+      update_cache: yes
+      cache_valid_time: 3600
+     when: ansible_os_family == "Debian"
+
+   - name: Install Java on Debian
+     ansible.builtin.apt:
+      name: "{{ javaondebian }}"
+      present: yes
+     when: ansible_os_family == "Debian"
+
+   - name: Update yum-cache
+     ansible.builtin.yum:
+        update_cache: yes
+        cache_valid_time: 3600
+     when: ansible_os_family == "RedHat"
+
+   - name: Install Java on RedHat
+     ansible.builtin.yum:
+      name: "{{ javaonredhat }}"
+      present: yes
+     when: ansible_os_family == "RedHat"
+
+  
