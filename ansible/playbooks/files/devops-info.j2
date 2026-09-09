@@ -1,0 +1,11 @@
+<h1>This is a dynamic file</h1>
+<h1>The os is {{ ansible_os_family }}</h1>
+
+<h2> The os is {{ansible_distribution}} </h2>
+<h2> The os version is {{ansible_distribution_version}} </h2>
+<h2> The os architecture is {{ansible_architecture}} </h2>
+<h2> The IP is {{ ansible_default_ipv4.address }} </h2>
+<h2> The hostname is {{ ansible_hostname }} </h2>
+<h2> The architecture is {{ ansible_architecture }} </h2>
+<h2> The memory is {{ ansible_memtotal_mb }} </h2>
+<h2> the java version is {{ ansible_java_version.stdout }} </h2>

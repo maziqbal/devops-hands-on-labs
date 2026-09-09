@@ -11,8 +11,12 @@
       file:
        path: /home/maha/devops-labs
        state: directory
-    - name: Copy file to rmeote machine
+    - name: Copy a static file to remote machine
       copy:
        src: files/devops-info.txt
        dest: /home/maha/devops-labs/devops-info.txt
+    - name: Create and copy a dynamic file using template module to remote modules
+      template:
+       src: templates/devops-info.j2
+       dest: /var/www/html/index.html
 
