@@ -11,3 +11,8 @@
       file:
        path: /home/maha/devops-labs
        state: directory
+    - name: Copy file to rmeote machine
+      copy:
+       src: files/devops-info.txt
+       dest: /home/maha/devops-labs/devops-info.txt
+
