@@ -1,9 +1,9 @@
 ---
-- hosts:
+- hosts: node1
   become: yes
   tasks:
     - include_tasks: create-file.yml
-    - name: install apache 2 webserver
+    - name: install apache2 webserver
       apt:
        name: apache2
        state: present
@@ -11,4 +11,3 @@
       file:
        path: /home/maha/devops-labs
        state: directory
-        
