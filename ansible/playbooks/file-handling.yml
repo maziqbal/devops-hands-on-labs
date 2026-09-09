@@ -1,0 +1,9 @@
+---
+- hosts:
+  become: yes
+  tasks:
+    - include_tasks: create-file.yml
+    - name: install apache 2 webserver
+      apt:
+       name: apache2
+       state: present
