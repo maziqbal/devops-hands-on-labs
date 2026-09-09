@@ -1,2 +1,5 @@
 # .gitignore
 ansible/inventory/hosts
+ansible/inventory/group_vars
+ansible/inventory/host_vars
+
