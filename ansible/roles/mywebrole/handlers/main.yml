@@ -1,0 +1,7 @@
+#SPDX-License-Identifier: MIT-0
+---
+# handlers file for mywebrole
+- name: RestartWebServer
+  service:
+    name: "{{ webserver_package }}"
+    state: restarted

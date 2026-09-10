@@ -1,0 +1,5 @@
+---
+- hosts: IP_DDRESS
+  become: yes
+  roles:
+    - role: ../../mywebrole
