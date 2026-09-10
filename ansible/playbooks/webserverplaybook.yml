@@ -2,4 +2,4 @@
 - hosts: webservers
   become: yes
   roles:
-    - role: ../../mywebrole
+    - role: ../roles/mywebrole
