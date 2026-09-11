@@ -1,7 +1,7 @@
 ---
 - name: Change ownership of tomcat directory with -r
   ansible.builtin.file:
-    path: /opt/tomcat
+    path: /opt/tomcat/apache-tomcat-10.1.59
     owner: tomcat
     group: tomcat
     state: directory
@@ -9,7 +9,7 @@
 
 - name: Set permissions chmod +x  on bin directory
   ansible.builtin.file: 
-    path: /opt/tomcat/bin
+    path: /opt/tomcat/apache-tomcat-10.1.59/bin
     mode: '+x'
     recurse: yes
     state: directory

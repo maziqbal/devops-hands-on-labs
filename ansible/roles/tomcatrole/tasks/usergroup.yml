@@ -9,5 +9,5 @@
     name: tomcat
     group: tomcat
     shell: /bin/false
-    home: /opt/tomcat
+    home: /opt/tomcat/apache-tomcat-10.1.59
     state: present
