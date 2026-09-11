@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: appservers
   become: yes
   roles: 
    - role: ../roles/tomcatrole
