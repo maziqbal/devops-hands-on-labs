@@ -1,0 +1,17 @@
+---
+- name: download tomcat
+  ansible.builtin.get_url:
+    url: https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.59/bin/apache-tomcat-10.1.59.tar.gz
+    dest: /home/maha/apache-tomcat-10.1.59.tar.gz
+
+- name: create tomcat directory
+  ansible.builtin.file:
+    path: /opt/tomcat
+    state: directory
+
+- name: extract tomcat
+  ansible.builtin.unarchive:
+    src: /home/maha/apache-tomcat-10.1.59.tar.gz
+    dest: /opt/tomcat
+    remote_src: yes 
+    

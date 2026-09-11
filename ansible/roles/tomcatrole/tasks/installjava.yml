@@ -1,0 +1,10 @@
+---
+- name: update apt cache
+  ansible.builtin.apt:
+    update_cache: yes
+
+- name: Install Java
+  ansible.builtin.apt:
+    name: openjdk-21-jdk
+    state: present
+    
