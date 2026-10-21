@@ -32,3 +32,25 @@ ansible/
 │   └── hosts.example
 └── playbooks/
     └── apache-webserver.yml
+
+## Kubernetes
+
+Current labs include:
+
+- Creating and managing Pods using YAML manifests
+- Deploying an Nginx container
+- Inspecting Pods and cluster resources
+- Managing the Pod lifecycle with `kubectl`
+
+### Structure
+
+```text
+kubernetes/
+├── README.md
+├── commands.md
+└── nginx-pod.yaml
+```
+
+### References
+
+- [Kubernetes Commands](kubernetes/commands.md)
