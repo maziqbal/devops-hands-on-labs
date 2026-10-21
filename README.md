@@ -53,4 +53,4 @@ kubernetes/
 
 ### References
 
-- [Kubernetes Commands](kubernetes/commands.md)
+- [Kubernetes Commands](https://github.com/maziqbal/devops-hands-on-labs/blob/main/k8s/commands.md)
