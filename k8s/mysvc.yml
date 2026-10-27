@@ -1,0 +1,14 @@
+apiVersion: 1
+kind: Service
+metadata:
+  name: mysvc
+  labels:
+    app: nginx
+spec:
+  selector:
+    app: nginx
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      nodePort: 30001
