@@ -5,16 +5,18 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 3
+  replicas: 2
   selector:
-    app: nginx
+    app: myapp
+    version: 2.6.1
   template:
     metadata:
       labels:
-        app: nginx
+        app: myapp
+        version: 2.6.1
     spec:
       containers:
-        - name: nginx
-          image: nginx:stable
+        - name: mahalogin
+          image: maha4iac/mahalogin:1
           ports:
-            - containerPort: 80
+            - containerPort: 8080

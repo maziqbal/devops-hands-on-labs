@@ -3,12 +3,14 @@ kind: Service
 metadata:
   name: mysvc
   labels:
-    app: nginx
+    app: myapp
+    version: 2.6.1
 spec:
   selector:
-    app: nginx
+    app: myapp
+    version: 2.6.1
   type: NodePort
   ports:
     - protocol: TCP
-      port: 80
+      port: 8080
       nodePort: 30001
