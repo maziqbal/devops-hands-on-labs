@@ -6,17 +6,20 @@ metadata:
   labels:
     app: myjavaapp
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: myjavaapp
   template:
-    metadata  :
+    metadata:
       labels:
         app: myjavaapp
     spec:
+      imagePullSecrets:
+        - name: ecr-secret
       containers:
-        - name: myjavaapp
+        - name: myjavaapp-container
           image: 493392057026.dkr.ecr.us-east-1.amazonaws.com/webdevmz:1
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
