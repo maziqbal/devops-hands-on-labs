@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata: 
   name: myjavaapp-deploy
+  namespace: production
   labels:
     app: myjavaapp
 spec:
@@ -16,6 +17,6 @@ spec:
     spec:
       containers:
         - name: myjavaapp
-          image: maha4iac/mahalogin:2
+          image: 493392057026.dkr.ecr.us-east-1.amazonaws.com/webdevmz:1
           ports:
             - containerPort: 8080
